@@ -5,7 +5,14 @@
 from ggame import *
 from random import randint
 
-if __name__ == '__main__': 
 
-App().run(step)
+
+if __name__ == '__main__': 
+    
+    red = Color(0xFF0000,1)
+    black = Color(0x000000,1)
+    
+    redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
+
+    App().run(step)
 
