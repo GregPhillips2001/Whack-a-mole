@@ -22,7 +22,10 @@ def mouseClick(event):
         print("Circle 6")
         
         
-def step
+def step():
+    data["frames"] += 1
+    if data["frames"] == 200:
+
 
 
 if __name__ == '__main__': 
