@@ -20,7 +20,10 @@ def mouseClick(event):
         print("Circle 5")
     if event.x >= 201 and event.x <= 300 and event.y >= 101 and event.y <= 200:
         print("Circle 6")
-        
+
+
+def moleAppear():
+    
         
 def step():
     data["frames"] += 1
@@ -39,7 +42,7 @@ if __name__ == '__main__':
     white = Color(0xFFFFFF,1)
     
     blackCircle = CircleAsset(50,LineStyle(1,black), white)
-    
+    redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
     
     #Creates circles where mole can appear
     circle1 = Sprite(blackCircle,(50,50)) #(num of pixels right, num of pixels down)
@@ -53,4 +56,3 @@ if __name__ == '__main__':
     App().listenMouseEvent("click", mouseClick) #Listens for mouse click
     App().run()
 
-redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
