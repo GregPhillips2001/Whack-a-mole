@@ -16,14 +16,16 @@ if __name__ == '__main__':
     blackCircle = CircleAsset(50,LineStyle(1,black), white)
     
     
-    
-    Sprite(blackCircle,(50,50))
-    Sprite(blackCircle,(150,50))
-    Sprite(blackCircle,(250,50))
+    #Creates circles where mole can appear
+    circle1 = Sprite(blackCircle,(50,50))
+    circle2 = Sprite(blackCircle,(150,50))
+    cirlcle3 = Sprite(blackCircle,(250,50))
     Sprite(blackCircle,(50,150))
     Sprite(blackCircle,(150,150))
     Sprite(blackCircle,(250,150))
-    App().listenMouseEvent("click", mouseClick)
+    
+    
+    App().listenMouseEvent("click", mouseClick) #Listens for mouse click
     App().run()
 
 redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
