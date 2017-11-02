@@ -24,9 +24,12 @@ def mouseClick(event):
 
 #Sprites moles in random circles
 def moleAppear():
-    num = randint(1,5)
+    num = randint(1,1)
     
     if num == 1:
+        redCircle1 = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
+        Sprite(redCircle1,(50,50)) #(num of pixels right, num of pixels down)
+        
         
     
     
@@ -34,7 +37,7 @@ def moleAppear():
 #new moles after more than x frames have passed
 def step():
     data["frames"] += 1
-    if data["frames"] == 200:
+    if data["frames"] == 50:
         moleAppear()
 
 
@@ -50,7 +53,6 @@ if __name__ == '__main__':
     white = Color(0xFFFFFF,1)
     
     blackCircle = CircleAsset(50,LineStyle(1,black), white)
-    redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
     
     #Creates circles where mole can appear
     circle1 = Sprite(blackCircle,(50,50)) #(num of pixels right, num of pixels down)
