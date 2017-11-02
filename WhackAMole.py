@@ -22,12 +22,16 @@ def mouseClick(event):
         print("Circle 6")
 
 
+#Sprites moles in random circles
 def moleAppear():
     
-        
+    
+#keeps track of how many frames have passed
+#new moles after more than x frames have passed
 def step():
     data["frames"] += 1
     if data["frames"] == 200:
+        moleAppear()
 
 
 
