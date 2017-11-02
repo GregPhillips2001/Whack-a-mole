@@ -24,6 +24,10 @@ def mouseClick(event):
 
 #Sprites moles in random circles
 def moleAppear():
+    num = randint(1,5)
+    
+    if num == 1:
+        
     
     
 #keeps track of how many frames have passed
