@@ -24,7 +24,7 @@ def mouseClick(event):
 
 #Sprites moles in random circles
 def moleAppear():
-    num = randint(1,1)
+    num = randint(1,5)
     
     redCircle1 = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
     
@@ -65,5 +65,5 @@ if __name__ == '__main__':
     
     
     App().listenMouseEvent("click", mouseClick) #Listens for mouse click
-    App().run()
+    App().run(step)
 
