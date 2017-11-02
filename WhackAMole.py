@@ -30,6 +30,10 @@ def step():
 
 if __name__ == '__main__': 
     
+    data = {}
+    data["score"] = 0
+    data["frames"] = 0
+    
     red = Color(0xFF0000,1)
     black = Color(0x000000,1)
     white = Color(0xFFFFFF,1)
