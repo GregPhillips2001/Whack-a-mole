@@ -29,7 +29,7 @@ def moleAppear():
     if num == 1:
         redCircle1 = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
         Sprite(redCircle1,(50,50)) #(num of pixels right, num of pixels down)
-        
+    data["frames"] = 0
         
     
     
