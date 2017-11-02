@@ -23,6 +23,7 @@ if __name__ == '__main__':
     Sprite(blackCircle,(50,150))
     Sprite(blackCircle,(150,150))
     Sprite(blackCircle,(250,150))
+    App().listenMouseEvent("click", mouseClick)
     App().run()
 
 redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
