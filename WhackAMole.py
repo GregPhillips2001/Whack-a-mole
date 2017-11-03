@@ -38,7 +38,7 @@ def moleAppear():
 #new moles after more than x frames have passed
 def step():
     data["frames"] += 1
-    if data["frames"] == 50:
+    if data["frames"] == 30:
         moleAppear()
 
 
