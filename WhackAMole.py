@@ -30,6 +30,8 @@ def moleAppear():
     
     if num == 1:
         Sprite(redCircle1,(50,50)) #(num of pixels right, num of pixels down)
+        
+    data["frames"].destroy()
     data["frames"] = 0
         
     
