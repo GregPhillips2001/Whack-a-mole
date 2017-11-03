@@ -103,7 +103,10 @@ if __name__ == '__main__':
     circle5 = Sprite(blackCircle,(150,150))
     circle6 = Sprite(blackCircle,(250,150))
     
+    scoreBox = TextAsset("Score = 0")
     
+    data["scoreText"] = Sprite(scoreBox, (25,225))
+        
     App().listenMouseEvent("click", mouseClick) #Listens for mouse click
     App().run(step)
 
