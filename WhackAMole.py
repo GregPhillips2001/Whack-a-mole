@@ -81,6 +81,11 @@ def step():
     if data["frames"] == 30:
         moleAppear()
 
+def updateScore():
+    data["score"] += 10
+    data["scoreText"].destroy()
+    scoreBox = TextAsset("Score = "+str(data["score"]))
+    data["scoreText"] = Sprite(scoreBox, (25,225))
 
 
 if __name__ == '__main__': 
