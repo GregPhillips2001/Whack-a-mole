@@ -24,7 +24,7 @@ def mouseClick(event):
 
 #Sprites moles in random circles
 def moleAppear():
-    num = randint(1,5)
+    num = randint(1,2)
     
     redCircle1 = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
     
