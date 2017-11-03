@@ -24,14 +24,16 @@ def mouseClick(event):
 
 #Sprites moles in random circles
 def moleAppear():
-    redCircle1 = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
-    
+    redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
+    whiteCircle = CircleAsset(50,LineStyle(1,black),white)
     num = randint(1,2)
     
     if num == 1:
-        Sprite(redCircle1,(50,50)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
+    else:
+        Sprite(whiteCircle,(50,50))
         
-    data["frames"].destroy()
+
     data["frames"] = 0
         
     
