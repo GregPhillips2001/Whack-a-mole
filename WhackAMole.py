@@ -26,12 +26,48 @@ def mouseClick(event):
 def moleAppear():
     redCircle = CircleAsset(50,LineStyle(1,red),red) #(radius,outline,fill)
     whiteCircle = CircleAsset(50,LineStyle(1,black),white)
-    num = randint(1,2)
     
+    #Cicle1
+    num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(50,50))
+    
+    #Circle2
+    num = randint(1,5)
+    if num == 1:
+        Sprite(redCircle,(150,50)) #(num of pixels right, num of pixels down)
+    else:
+        Sprite(whiteCircle,(150,50))
+    
+    #Circle3
+    num = randint(1,5)
+    if num == 1:
+        Sprite(redCircle,(250,50)) #(num of pixels right, num of pixels down)
+    else:
+        Sprite(whiteCircle,(250,50))
+        
+    #Circle4
+    num = randint(1,5)
+    if num == 1:
+        Sprite(redCircle,(50,150)) #(num of pixels right, num of pixels down)
+    else:
+        Sprite(whiteCircle,(50,150))
+    
+    #Circle5
+    num = randint(1,5)
+    if num == 1:
+        Sprite(redCircle,(150,150)) #(num of pixels right, num of pixels down)
+    else:
+        Sprite(whiteCircle,(150,150))
+        
+    #Circle60
+    num = randint(1,5)
+    if num == 1:
+        Sprite(redCircle,(250,150)) #(num of pixels right, num of pixels down)
+    else:
+        Sprite(whiteCircle,(250,150))
         
 
     data["frames"] = 0
