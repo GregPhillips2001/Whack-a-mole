@@ -9,6 +9,7 @@ from random import randint
 #Knows what circle is clicked if you click a circle
 def mouseClick(event):
     if event.x >= 0 and event.x <= 100 and event.y >= 0 and event.y <= 100:
+        print("Circle 1")
     if event.x >= 101 and event.x <= 200 and event.y >= 0 and event.y <= 100:
         print("Circle 2")
     if event.x >= 201 and event.x <= 300 and event.y >= 0 and event.y <= 100:
