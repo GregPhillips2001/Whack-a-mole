@@ -9,7 +9,6 @@ from random import randint
 #Knows what circle is clicked if you click a circle
 def mouseClick(event):
     if event.x >= 0 and event.x <= 100 and event.y >= 0 and event.y <= 100:
-        print("Circle 1")
     if event.x >= 101 and event.x <= 200 and event.y >= 0 and event.y <= 100:
         print("Circle 2")
     if event.x >= 201 and event.x <= 300 and event.y >= 0 and event.y <= 100:
@@ -30,42 +29,42 @@ def moleAppear():
     #Cicle1
     num = randint(1,5)
     if num == 1:
-        Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
+        redCircle1 = Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(50,50))
     
     #Circle2
     num = randint(1,5)
     if num == 1:
-        Sprite(redCircle,(150,50)) #(num of pixels right, num of pixels down)
+        redCircle2 = Sprite(redCircle,(150,50)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(150,50))
     
     #Circle3
     num = randint(1,5)
     if num == 1:
-        Sprite(redCircle,(250,50)) #(num of pixels right, num of pixels down)
+        redCircle3 = Sprite(redCircle,(250,50)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(250,50))
         
     #Circle4
     num = randint(1,5)
     if num == 1:
-        Sprite(redCircle,(50,150)) #(num of pixels right, num of pixels down)
+        redCircle4 = Sprite(redCircle,(50,150)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(50,150))
     
     #Circle5
     num = randint(1,5)
     if num == 1:
-        Sprite(redCircle,(150,150)) #(num of pixels right, num of pixels down)
+        redCircle5 = Sprite(redCircle,(150,150)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(150,150))
         
     #Circle60
     num = randint(1,5)
     if num == 1:
-        Sprite(redCircle,(250,150)) #(num of pixels right, num of pixels down)
+        redCircle6 = Sprite(redCircle,(250,150)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(250,150))
         
@@ -80,6 +79,8 @@ def step():
     data["frames"] += 1
     if data["frames"] == 50:
         moleAppear()
+        
+#Knows if you click a red circle
 
 def updateScore():
     data["score"] += 10
