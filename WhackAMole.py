@@ -10,16 +10,16 @@ from random import randint
 def mouseClick(event):
     if event.x >= 0 and event.x <= 100 and event.y >= 0 and event.y <= 100 and data["mole1"] == True:
         updateScore()
-    if event.x >= 101 and event.x <= 200 and event.y >= 0 and event.y <= 100:
-        print("Circle 2")
-    if event.x >= 201 and event.x <= 300 and event.y >= 0 and event.y <= 100:
-        print("Circle 3")
-    if event.x >= 0 and event.x <= 100 and event.y >= 101 and event.y <= 200:
-        print("Circle 4")
-    if event.x >= 101 and event.x <= 200 and event.y >= 101 and event.y <= 200:
-        print("Circle 5")
-    if event.x >= 201 and event.x <= 300 and event.y >= 101 and event.y <= 200:
-        print("Circle 6")
+    if event.x >= 101 and event.x <= 200 and event.y >= 0 and event.y <= 100 and data["mole2"] == True:
+        updateScore()
+    if event.x >= 201 and event.x <= 300 and event.y >= 0 and event.y <= 100 and data["mole3"] == True:
+        updateScore()
+    if event.x >= 0 and event.x <= 100 and event.y >= 101 and event.y <= 200 and data["mole4"] == True:
+        updateScore()
+    if event.x >= 101 and event.x <= 200 and event.y >= 101 and event.y <= 200 and data["mole5"] == True:
+        updateScore()
+    if event.x >= 201 and event.x <= 300 and event.y >= 101 and event.y <= 200 and data["mole6"] == True:
+        updateScore()
 
 
 #Sprites moles in random circles
@@ -40,36 +40,46 @@ def moleAppear():
     num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(150,50)) #(num of pixels right, num of pixels down)
+        data["mole2"] = True
     else:
         Sprite(whiteCircle,(150,50))
+        data["mole2"] = False
     
     #Circle3
     num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(250,50)) #(num of pixels right, num of pixels down)
+        data["mole3"] = True
     else:
         Sprite(whiteCircle,(250,50))
+        data["mole3"] = False
         
     #Circle4
     num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(50,150)) #(num of pixels right, num of pixels down)
+        data["mole4"] = True
     else:
         Sprite(whiteCircle,(50,150))
+        data["mole4"] = False
     
     #Circle5
     num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(150,150)) #(num of pixels right, num of pixels down)
+        data["mole5"] = True
     else:
         Sprite(whiteCircle,(150,150))
+        data["mole5"] = False
         
     #Circle60
     num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(250,150)) #(num of pixels right, num of pixels down)
+        data["mole6"] = True
     else:
         Sprite(whiteCircle,(250,150))
+        data["mole6"] = False
         
 
     data["frames"] = 0
@@ -99,6 +109,11 @@ if __name__ == '__main__':
     data["score"] = 0
     data["frames"] = 0
     data["mole1"] = False
+    data["mole2"] = False
+    data["mole3"] = False
+    data["mole4"] = False
+    data["mole5"] = False
+    data["mole6"] = False
     
     red = Color(0xFF0000,1)
     black = Color(0x000000,1)
