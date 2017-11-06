@@ -130,18 +130,20 @@ if __name__ == '__main__':
     
     blackCircle = CircleAsset(50,LineStyle(1,black), white)
     
-    #Creates circles where mole can appear
-    circle1 = Sprite(blackCircle,(50,50)) #(num of pixels right, num of pixels down)
-    circle2 = Sprite(blackCircle,(150,50))
-    circle3 = Sprite(blackCircle,(250,50))
-    circle4 = Sprite(blackCircle,(50,150))
-    circle5 = Sprite(blackCircle,(150,150))
-    circle6 = Sprite(blackCircle,(250,150))
-    
-    scoreBox = TextAsset("Score = 0")
-    
-    data["scoreText"] = Sprite(scoreBox, (25,225))
+    if data["gameover"] == False:
         
-    App().listenMouseEvent("click", mouseClick) #Listens for mouse click
-    App().run(step)
-
+        #Creates circles where mole can appear
+        circle1 = Sprite(blackCircle,(50,50)) #(num of pixels right, num of pixels down)
+        circle2 = Sprite(blackCircle,(150,50))
+        circle3 = Sprite(blackCircle,(250,50))
+        circle4 = Sprite(blackCircle,(50,150))
+        circle5 = Sprite(blackCircle,(150,150))
+        circle6 = Sprite(blackCircle,(250,150))
+        
+        scoreBox = TextAsset("Score = 0")
+        
+        data["scoreText"] = Sprite(scoreBox, (25,225))
+            
+        App().listenMouseEvent("click", mouseClick) #Listens for mouse click
+        App().run(step)
+    
