@@ -31,10 +31,10 @@ def moleAppear():
     num = randint(1,5)
     if num == 1:
         Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
-        data["mole1"].destroy()
         data["mole1"] = True
     else:
         Sprite(whiteCircle,(50,50))
+        data["mole1"] = False
     
     #Circle2
     num = randint(1,5)
