@@ -7,6 +7,7 @@ from random import randint
 
 
 #Knows what circle is clicked if you click a circle
+#Knows if you click a mole
 def mouseClick(event):
     if event.x >= 0 and event.x <= 100 and event.y >= 0 and event.y <= 100 and data["mole1"] == True:
         updateScore()
@@ -87,13 +88,12 @@ def moleAppear():
     
     
 #keeps track of how many frames have passed
-#new moles after more than x frames have passed
+#new moles after more than 50 frames have passed
 def step():
     data["frames"] += 1
     if data["frames"] == 50:
         moleAppear()
         
-#Knows if you click a red circle
 
 def updateScore():
     data["score"] += 10
