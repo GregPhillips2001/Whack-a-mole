@@ -30,7 +30,7 @@ def moleAppear():
     #Cicle1
     num = randint(1,5)
     if num == 1:
-        redCircle1 = Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
         data["mole1"].destroy()
         data["mole1"] = True
     else:
@@ -39,35 +39,35 @@ def moleAppear():
     #Circle2
     num = randint(1,5)
     if num == 1:
-        redCircle2 = Sprite(redCircle,(150,50)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(150,50)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(150,50))
     
     #Circle3
     num = randint(1,5)
     if num == 1:
-        redCircle3 = Sprite(redCircle,(250,50)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(250,50)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(250,50))
         
     #Circle4
     num = randint(1,5)
     if num == 1:
-        redCircle4 = Sprite(redCircle,(50,150)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(50,150)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(50,150))
     
     #Circle5
     num = randint(1,5)
     if num == 1:
-        redCircle5 = Sprite(redCircle,(150,150)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(150,150)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(150,150))
         
     #Circle60
     num = randint(1,5)
     if num == 1:
-        redCircle6 = Sprite(redCircle,(250,150)) #(num of pixels right, num of pixels down)
+        Sprite(redCircle,(250,150)) #(num of pixels right, num of pixels down)
     else:
         Sprite(whiteCircle,(250,150))
         
