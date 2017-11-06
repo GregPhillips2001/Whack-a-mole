@@ -8,8 +8,8 @@ from random import randint
 
 #Knows what circle is clicked if you click a circle
 def mouseClick(event):
-    if event.x >= 0 and event.x <= 100 and event.y >= 0 and event.y <= 100:
-        print("Circle 1")
+    if event.x >= 0 and event.x <= 100 and event.y >= 0 and event.y <= 100 and data["mole1"] == True:
+        updateScore()
     if event.x >= 101 and event.x <= 200 and event.y >= 0 and event.y <= 100:
         print("Circle 2")
     if event.x >= 201 and event.x <= 300 and event.y >= 0 and event.y <= 100:
@@ -31,6 +31,8 @@ def moleAppear():
     num = randint(1,5)
     if num == 1:
         redCircle1 = Sprite(redCircle,(50,50)) #(num of pixels right, num of pixels down)
+        data["mole1"].destroy()
+        data["mole1"] = True
     else:
         Sprite(whiteCircle,(50,50))
     
@@ -92,9 +94,11 @@ def updateScore():
 
 if __name__ == '__main__': 
     
+    #Dictionary
     data = {}
     data["score"] = 0
     data["frames"] = 0
+    data["mole1"] = False
     
     red = Color(0xFF0000,1)
     black = Color(0x000000,1)
