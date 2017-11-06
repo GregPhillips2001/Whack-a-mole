@@ -83,7 +83,6 @@ def moleAppear():
         data["mole6"] = False
         
 
-    data["frames"] = 0
         
     
     
@@ -91,9 +90,17 @@ def moleAppear():
 #new moles after more than 50 frames have passed
 def step():
     data["frames"] += 1
-    if data["frames"] == 50:
+    if data["frames"] == 1000:
+        gameover()
+    if data["frames"]% 50 == 0:
         moleAppear()
-        
+
+def gameover():
+    whiteRectangle = RectangleAsset(1000,1000,LineStyle(1,white),white)
+    gameovertext = TextAsset("Game Over!")
+    
+    Sprite(whiteRectangle)
+    Sprite(gameovertext, (400,200))
 
 def updateScore():
     data["score"] += 10
