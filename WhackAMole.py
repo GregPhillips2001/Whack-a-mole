@@ -92,10 +92,11 @@ def step():
     data["frames"] += 1
     if data["frames"] == 1000:
         gameover()
-    if data["frames"]% 50 == 0:
+    elif data["frames"]% 50 == 0:
         moleAppear()
 
 def gameover():
+    data["gameover"] = True
     whiteRectangle = RectangleAsset(1000,1000,LineStyle(1,white),white)
     gameovertext = TextAsset("Game Over!")
     
@@ -121,6 +122,7 @@ if __name__ == '__main__':
     data["mole4"] = False
     data["mole5"] = False
     data["mole6"] = False
+    data["gameover"] = False
     
     red = Color(0xFF0000,1)
     black = Color(0x000000,1)
