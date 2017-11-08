@@ -92,7 +92,7 @@ def step():
     data["frames"] += 1
     if data["frames"] == 1000:
         gameover()
-    elif data["frames"]% 50 == 0:
+    elif data["frames"]% 50 == 0 and data["gameover"] == False:
         moleAppear()
 
 #Ends the game
